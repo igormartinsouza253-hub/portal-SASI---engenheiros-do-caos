@@ -1,3 +1,14 @@
+:root {
+    --azul-sasi: #102757;
+    --azul-hover: #0d1f4a;
+    --azul-claro: #eaf0fb;
+    --texto: #263248;
+    --cinza: #667085;
+    --fundo: #f7f9fc;
+}
+* {
+    box-sizing: border-box;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -7,37 +18,65 @@ body {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
     position: fixed;
-    top: 0;
     left: 0;
     right: 0;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    min-height: 40px;
-    padding: 15px 5%;
+    background-color: var(--azul-sasi);
     color: #fff;
-    background-color: #102757;
+    padding: 12px 24px;
+    height: 80px;
     box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+    h1 {
+        text-align: center;
+        margin: 0;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 8px;
+        h2 {
+            margin: 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        img {
+            height: 36px;
+            width: auto;
+        }
+    }
+    
+    .voltar {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        align-self: center;
+        width: fit-content;
+        padding: 10px 12px 10px 6px;
+        text-decoration: none;
+        background-color: var(--fundo);
+        border-radius: 10px;
+        color: var(--azul-sasi);
+        font-size: 14px;
+        font-weight: 600;
+        &:hover {
+            color: #113175;
+            background-color: #ddd;
+            transform: scale(1.03);
+            transition: all 0.3s ease;
+        }
+        svg {
+        
+            height: 16px;
+        }
+    }
 }
-
-header h1,
-header h2 {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
-
-.logo img {
-    height: 50px;
-}
-
 main {
     display: flex;
     flex-direction: column;
@@ -80,7 +119,7 @@ main {
 
 .cadastro-container span {
     margin-bottom: 22px;
-    color: #102757;
+    color: var(--azul-sasi);
     font-size: 1.2rem;
     font-weight: 600;
     text-align: center;
@@ -100,8 +139,8 @@ main {
 }
 
 .cadastro-container input:focus {
-    outline: 3px solid #eaf0fb;
-    border-color: #102757;
+    outline: 3px solid var(--azul-claro);
+    border-color: var(--azul-sasi);
 }
 
 .cadastro-container a {
@@ -205,7 +244,6 @@ main {
     gap: 10px;
     align-items: center;
     text-align: center;
-    padding: 12px 16px;
     width: 100%;
     box-sizing: border-box;
     text-decoration: none;

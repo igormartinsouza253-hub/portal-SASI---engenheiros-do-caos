@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="palestrante.css">
+    <title>Inscrever palestra - SASI</title>
+</head>
+<body>
+    <header>
+        <h1>Nova atividade</h1>
+        <div class="logo">
+            <h2>Portal SASI</h2>
+            <img src="logo-white-ufrrj.svg" alt="Logo da UFRRJ">
+        </div>
+    </header>
+
+    <main>
+        <section class="formulario-container">
+            <h2>Cadastro de oficina/palestra</h2>
+            <p>Preencha as informações da atividade que deseja oferecer no SASI.</p>
+
+            <form class="formulario" action="#" method="post" enctype="multipart/form-data">
+                <label for="nome-palestra">Nome da palestra ou oficina</label>
+                <input type="text" id="nome-palestra" name="nome-palestra" placeholder="Digite o nome da atividade" required>
+
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao" placeholder="Descreva o conteúdo da atividade" required></textarea>
+
+                <label for="pre-requisitos">Pré-requisitos</label>
+                <textarea id="pre-requisitos" name="pre-requisitos" placeholder="Informe os conhecimentos necessários"></textarea>
+
+                <label for="materiais">Materiais necessários</label>
+                <textarea id="materiais" name="materiais" placeholder="Informe os materiais necessários"></textarea>
+
+                <label for="material-apoio">Material de apoio</label>
+                <input class="arquivo" type="file" id="material-apoio" name="material-apoio">
+                
+                <div class="form-buttons">
+                    <a class="btn-cancel" href="palestrante.html">Cancelar</a>
+                    <a class="btn-submit" href="#">Cadastrar atividade</a>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

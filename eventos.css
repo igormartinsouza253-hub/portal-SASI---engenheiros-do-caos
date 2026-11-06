@@ -274,20 +274,32 @@ main {
 .formulario button:focus {
     background: var(--azul-hover);
 }
-
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     header {
-        padding: 15px 20px;
+        padding: 10px 12px;
+    }
+    header .voltar .texto-btn, header .logo .texto-logo {
+        display: none;
     }
 
-    header h1,
-    header h2 {
-        font-size: 14px;
+    header .voltar {
+        padding: 10px 8px;
+        justify-content: center;
     }
-
-    .logo img {
+    header .voltar svg {
+        height: 18px;
+        margin: 0;
+    }
+    header .logo img {
         height: 40px;
     }
+    header h1 {
+        font-size: 16px;
+        
+    }
+}
+
+@media (max-width: 480px) {
 
     .informacoes {
         grid-template-columns: 1fr;

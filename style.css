@@ -68,6 +68,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding-top: 80px;
 } 
 
@@ -189,10 +190,19 @@ main{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 20px;
+        min-width: 40vw;
+        h2 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
     }
 
     .cadastro-container {
         margin: 20px auto;
         align-self: center;
+        width: 30%;
     }
 }
